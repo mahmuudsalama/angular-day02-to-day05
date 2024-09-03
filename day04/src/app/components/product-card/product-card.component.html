@@ -1,0 +1,20 @@
+ <div class="card w-100">
+  <img class="card-img-top" src="{{ product.imgSrc }}" alt="Card image">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title loader text-capitalize">{{ product?.name }}</h5>
+    <p class="card-text">Price: <span class="fw-bold">{{ product?.price }} EG</span></p>
+    @if (previousValue) {
+      <span class="text-success d-block mb-3">Discounted Price: {{ previousValue }}</span>
+    }
+    @if (product?.quantity == 0) {
+    <span class="text-danger d-block mb-3">Out of Stock</span>
+    }
+    @else if (product?.quantity == 1) {
+    <span class="text-success d-block mb-3">Only One Product Available</span>
+    }
+    @else {
+    <span class="text-dark d-block mb-3">Quantity: {{ product?.quantity}}</span>
+    }
+    <button  (click)="applyDiscount()" class="btn btn-primary">Add Discount</button>
+  </div>
+</div>

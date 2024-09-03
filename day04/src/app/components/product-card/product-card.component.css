@@ -1,0 +1,18 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body {
+  flex: 1 0 auto;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 300px;
+}
+
+.btn {
+  margin-top: auto;
+}
